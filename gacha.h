@@ -4,7 +4,7 @@
 #include <stdbool.h>
 #include "characters.h"
 #include "game.h"
-#include "player.h"
+#include "player.h" //pruebas
 
 
 void printGachaMenu();
