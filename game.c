@@ -1,5 +1,10 @@
 #include <stdio.h>
+#ifdef _WIN32
 #include <windows.h>
+#else
+#include <unistd.h>
+#define Sleep(x) usleep((x) * 1000) // liiipicotres: Sleep function for linux
+#endif                              // No tengo ni putísima idea de cómo funciona esto
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>

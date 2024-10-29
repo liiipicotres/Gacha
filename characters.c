@@ -29,8 +29,8 @@ void calculateLvl(tCharacter *character){
     
 
     
-    int expToLvlUp = (int)pow(2, character->level) + 250;
-
+    //int expToLvlUp = (int)pow(2, character->level) + 250;
+    int expToLvlUp = 1000;
     
     while(character->exp >= expToLvlUp){
         character->level++;
@@ -191,6 +191,7 @@ void printCharacter(tCharacter *character){
 
     case 3:
         printf("Role: Debuffer\n");
+        break;
     
     case 4:
         printf("Role: Buffer\n");

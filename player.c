@@ -27,7 +27,7 @@ void storePlayerInfo(char *playerFileName, tPlayer player){
     //////
     struct stat st = {0};
     if(stat("PlayerCharList", &st) == -1){
-        mkdir("PlayerCharList");    
+        mkdir("PlayerCharList", 0700);    
     }
 
     //////

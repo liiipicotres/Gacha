@@ -7,7 +7,7 @@
 #include "player.h" //pruebas
 
 
-void printGachaMenu();
+void printGachaMenu(tPlayer *player);
 
 void gachaRoll(tCharacter *character);
 

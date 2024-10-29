@@ -5,6 +5,7 @@
 #include "characters.h"
 #include "game.h"
 #include "player.h"
+#include "gacha.h"
 
 int main()
 {
@@ -20,7 +21,11 @@ int main()
 
   storePlayerInfo("Prueba", jugador);
 
+
+  printGachaMenu(&jugador);
   startGame();
+
+  
 
     return 0;
 }
