@@ -15,7 +15,7 @@ int main()
   //storeFile(&characters[2], aux);
   
   tPlayer jugador;
-  jugador.currency = 1000;
+  jugador.currency = 50555;
   strcpy(jugador.name, "Liiipicotres");
   setCharactersAtBase(jugador.playerCharacterList);
 

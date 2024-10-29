@@ -15,6 +15,8 @@ void gachaRoll10(tCharacter *characterList[]);
 
 void printGachaRoll(tCharacter *character);
 
+void gachaSystem(tPlayer *player);
+
 
 
 
