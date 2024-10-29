@@ -7,6 +7,15 @@
 #include <unistd.h>
 
 
+#ifdef _WIN32
+#include <direct.h>
+#define mkdir _mkdir
+#else
+#include <sys/stat.h>
+#include <sys/types.h>
+#endif
+
+
 
 void storePlayerInfo(char *playerFileName, tPlayer player){
 
@@ -27,7 +36,7 @@ void storePlayerInfo(char *playerFileName, tPlayer player){
     //////
     struct stat st = {0};
     if(stat("PlayerCharList", &st) == -1){
-        mkdir("PlayerCharList", 0700);    
+        mkdir("PlayerCharList");    
     }
 
     //////
