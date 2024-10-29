@@ -36,7 +36,11 @@ void storePlayerInfo(char *playerFileName, tPlayer player){
     //////
     struct stat st = {0};
     if(stat("PlayerCharList", &st) == -1){
-        mkdir("PlayerCharList");    
+        #ifdef _WIN32           //liiipicotres: Bendito sea stackoverflow
+        mkdir("PlayerCharList");
+        #elif __linux__
+        mkdir("PlayerCharList", 0700);   //liiipicotres: Error in linux but still works lol don't touch 
+        #endif
     }
 
     //////
